@@ -1,6 +1,7 @@
 package homeWork;
 
 import org.openqa.selenium.By;
+import org.openqa.selenium.Keys;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.chrome.ChromeDriver;
@@ -40,7 +41,9 @@ Permananet Address : different address
 
         WebElement permanentAddress = driver.findElement(By.xpath("//textarea[@id='permanentAddress']"));
         permanentAddress.sendKeys("different address");
-
+        permanentAddress.sendKeys(Keys.ARROW_DOWN);
+        permanentAddress.sendKeys(Keys.ARROW_DOWN);
+        permanentAddress.sendKeys(Keys.ARROW_DOWN);
         WebElement buttonSubmit = driver.findElement(By.xpath("//button[@id='submit']"));
         buttonSubmit.click();
     }
